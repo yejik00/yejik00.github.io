@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>오늘 뭐 먹지 · 주소가 바뀌었어요</title>
+<meta http-equiv="refresh" content="0; url=https://whatcanigetforyoutoday.github.io/">
+<link rel="canonical" href="https://whatcanigetforyoutoday.github.io/">
+<script>
+  // 예전 주소로 들어오면 새 주소로 바로 이동 (예전에 저장된 앱 화면도 정리)
+  if ('serviceWorker' in navigator) navigator.serviceWorker.getRegistrations().then(rs => rs.forEach(r => r.unregister()));
+  if (window.caches) caches.keys().then(ks => ks.forEach(k => caches.delete(k)));
+  location.replace('https://whatcanigetforyoutoday.github.io/' + location.search + location.hash);
+</script>
+<style>body{font-family:system-ui,sans-serif;background:#DDE5EB;color:#1F2633;display:grid;place-items:center;min-height:100vh;margin:0;padding:16px;text-align:center}a{color:#3B2EF2;font-weight:700}</style>
+</head>
+<body>
+<p>오늘 뭐 먹지 주소가 바뀌었어요.<br><a href="https://whatcanigetforyoutoday.github.io/">whatcanigetforyoutoday.github.io</a> 로 이동해요.</p>
+</body>
+</html>
